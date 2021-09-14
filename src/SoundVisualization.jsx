@@ -13,17 +13,15 @@ const SoundVisualization = () => {
     const scene = new THREE.Scene();
 
     const camera = new THREE.OrthographicCamera(
-      -diemnsion / 2,
-      diemnsion / 2,
-      diemnsion / 2,
-      -diemnsion / 2,
-      0.1,
-      1500
+      -550,
+      -250,
+      1200,
+      -200,
+      200,
+      5000
     );
-    camera.updateProjectionMatrix();
-
-    camera.position.set(0, 1500, -300);
-    camera.lookAt(scene.position);
+    camera.position.set(400, 1000, 300);
+    camera.lookAt(400, 0, 0);
     const renderer = new THREE.WebGLRenderer();
 
     renderer.setSize(diemnsion, diemnsion);
